@@ -12,6 +12,7 @@ npm i standard --save-dev
 ```
 - `npm i standard --save-dev`. StandardJS nos va a servir de Linter para una mejor escritura de JavaScript/React.
 - `npm i styled-components` styled-components
+- `npm i react-icons` iconos
 
 ### Instalar Vercel
 - `npm i -g vercel` Instalar vercel 
