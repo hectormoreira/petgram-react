@@ -30,3 +30,6 @@ npm i standard --save-dev
 ## Recursos
 - [Vercel](https://vercel.com/docs)
 - [styled-components](https://styled-components.com/)
+- [Cool Text Generator](https://maketext.io/)
+- [svgomg](https://jakearchibald.github.io/svgomg/)
+- [react-svgr](https://react-svgr.com/playground/)
