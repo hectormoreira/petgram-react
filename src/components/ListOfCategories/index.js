@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Category } from "../Category";
 import { Item, List } from "./styles";
 
-export const ListOfCategories = () => {
+function useCategoryData() {
   const [categories, setCategories] = useState([]);
-  const [showFixed, setShowFixed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(function () {
+    setLoading(true);
     window
       .fetch(
         "https://petgram-server-leidy-daza-leidydaza.vercel.app/categories"
@@ -14,25 +15,40 @@ export const ListOfCategories = () => {
       .then((res) => res.json())
       .then((response) => {
         setCategories(response);
+        setLoading(false);
       });
   }, []);
+  return { categories, loading };
+}
 
-  useEffect(function () {
-    const onScroll = (e) => {
-      const newShowFixed = window.scrollY > 200;
-      showFixed !== newShowFixed && setShowFixed(newShowFixed);
-    };
-    document.addEventListener("scroll", onScroll);
-    return () => document.removeEventListener("scroll", onScroll);
-  }, [showFixed]);
+export const ListOfCategories = () => {
+  const [showFixed, setShowFixed] = useState(false);
+  const { categories, loading } = useCategoryData();
+  useEffect(
+    function () {
+      const onScroll = (e) => {
+        const newShowFixed = window.scrollY > 200;
+        showFixed !== newShowFixed && setShowFixed(newShowFixed);
+      };
+      document.addEventListener("scroll", onScroll);
+      return () => document.removeEventListener("scroll", onScroll);
+    },
+    [showFixed]
+  );
 
   const renderList = (fixed) => (
-    <List className={fixed ? "fixed" : ""}>
-      {categories.map((category) => (
-        <Item key={category.id}>
-          <Category {...category} />
+    <List fixed={fixed}>
+      {loading ? (
+        <Item key="loading">
+          <Category />
         </Item>
-      ))}
+      ) : (
+        categories.map((category) => (
+          <Item key={category.id}>
+            <Category {...category} />
+          </Item>
+        ))
+      )}
     </List>
   );
 
