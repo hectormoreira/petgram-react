@@ -29,6 +29,16 @@ npm i standard --save-dev
 - Los styled components le permiten escribir CSS simple en sus componentes sin preocuparte por las colisiones de nombres de clase y haciendo uso del poder de JavaScript para manejar estilos con lógica (basado en props).
 >Nota: en styled components escribes CSS exacto, así que prácticamente todo lo que puedes hacer en CSS lo puedes hacer en styled components y se escribe igual.
 
+**¿Qué es GraphQL y React Apollo? Inicializando React Apollo Client y primer HoC**
+- GraphQL es un lenguaje creado por Facebook para obtener solo los datos que necesitamos en nuestra aplicación. Imaginemos que tenemos una REST API con WordPress, él nos entrega un JSON con mucha data innecesaria y solo queremos unos cuantos fields; GraphQL hace posible obtener únicamente esa data.
+
+- React Apollo es un cliente que nos va a permitir conectarnos a un servidor GraphQL.
+
+- `npm i apollo-boost`utilidad que nos permite inicializar nuestra conexión con un servidor de Apollo muy rápidamente y sin configuración
+- `npm install @apollo/client graphql` instalar Apollo y graphql
+
+
+
 
 ## Recursos
 - [Vercel](https://vercel.com/docs)
