@@ -16,6 +16,7 @@ npm i standard --save-dev
 - `npm i styled-components` styled-components
 - `npm i react-icons` iconos
 - `npm i intersection-observer` interception observer - polyfill
+- `npm i @reach/router` reach/router para manejo de rutas
 
 ### Instalar Vercel
 - `npm i -g vercel` Instalar vercel 
@@ -36,6 +37,11 @@ npm i standard --save-dev
 
 - `npm i apollo-boost`utilidad que nos permite inicializar nuestra conexión con un servidor de Apollo muy rápidamente y sin configuración
 - `npm install @apollo/client graphql` instalar Apollo y graphql
+
+**¿Qué es Reach Router?**
+- Reach Router es una versión simplificada y mejor optimizada de React Router, su creador es Ryan Florence el mismo creador de React Router.
+- Se anunció que los dos paquetes se iban a unir, pero su API se va a parecer más a Reach Router.
+
 
 
 
