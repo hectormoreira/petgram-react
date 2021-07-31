@@ -14,6 +14,7 @@ export const Input = styled.input`
     opacity: .3;
   }
 `;
+
 export const Button = styled.button`
   background: #8d00ff;
   border-radius: 3px;

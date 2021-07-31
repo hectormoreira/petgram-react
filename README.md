@@ -61,7 +61,7 @@ Un JWT se conforma de 3 partes:
 - Header: Es un objeto que define qué algoritmo y tipo tiene el token.
 - Payload: La información que almacenamos en el token.
 - Verify Signature: Una encriptación del header más el payload más tu llave secreta.
-Para utilizar nuestro JWT necesitamos añadirlo al header authorization de las peticiones HTTP que hagamos con el texto `Bearer [token]`.
+Para utilizar nuestro JWT necesitamos añadirlo al header `authorization` de las peticiones HTTP que hagamos con el texto `Bearer [token]`.
 
 
 

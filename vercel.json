@@ -8,14 +8,14 @@
     }
   ],
   "routes": [
-      {
-        "src": "(.*).js",
+    {
+      "src": "(.*).js",
       "dest": "/$1.js"
-      },
-      {
-        "src": "(.*).json",
+    },
+    {
+      "src": "(.*).json",
       "dest": "/$1.json"
-      },
+    },
     {
       "src": "/.*",
       "dest": "index.html"
