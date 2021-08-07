@@ -1,9 +1,10 @@
 import React, { createContext, useState } from "react";
 
 export const Context = createContext();
+
 const Provider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(() => {
-    return window.sessionStorage.getItem("token");
+    return window.sessionStorage.getItem("token") || false;
   });
   const value = {
     isAuth,

@@ -1,12 +1,20 @@
 import React from "react";
 import { ListOfCategories } from "../components/ListOfCategories";
 import { ListOfPhotoCards } from "../components/ListOfPhotoCard";
+import { Layout } from "../components/Layout";
 
-export const Home = ({id}) => {
+const HomePage = ({ categoryId }) => {
   return (
-    <>
+    <Layout
+      title="Tu app de fotos de mascotas"
+      subtitle="Con petgram puedes encontrar fotos de mascotas muy bonitas"
+    >
       <ListOfCategories />
-      <ListOfPhotoCards categoryId={id} />
-    </>
+      <ListOfPhotoCards categoryId={categoryId} />
+    </Layout>
   );
 };
+
+export const Home = React.memo(HomePage, (prevProps, props) => {
+  return prevProps.categoryId === props.categoryId;
+});

@@ -63,6 +63,21 @@ Un JWT se conforma de 3 partes:
 - Verify Signature: Una encriptación del header más el payload más tu llave secreta.
 Para utilizar nuestro JWT necesitamos añadirlo al header `authorization` de las peticiones HTTP que hagamos con el texto `Bearer [token]`.
 
+**Midiendo el performance de nuestra app y usando React.memo()**
+- ¡Los componentes solo harán render si sus props han cambiado! Normalmente, todos los componentes de React en nuestro árbol pasarán por un render cuando se realicen cambios. Con PureComponent y React.memo(), podemos tener solo algunos componentes renderizados.
+
+```js
+// mi-archivo.js
+{/*...*/}
+
+export default Home = React.memo(HomePage)
+```
+
+**React.lazy() y componente Suspense**
+- Suspense es un componente de React que nos va a permitir suspender algo cuando está en modo `lazy();` y `lazy()`. El cual nos va a permitir importar un componente que no será cargado hasta que este sea llamado. De esta forma mejoraremos el tiempo de carga de nuestra aplicación enormemente.
+
+
+
 
 
 ## Recursos
@@ -71,3 +86,4 @@ Para utilizar nuestro JWT necesitamos añadirlo al header `authorization` de las
 - [Cool Text Generator](https://maketext.io/)
 - [svgomg](https://jakearchibald.github.io/svgomg/)
 - [react-svgr](https://react-svgr.com/playground/)
+- [Helmet](https://github.com/nfl/react-helmet)
