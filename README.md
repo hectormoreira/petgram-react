@@ -76,6 +76,8 @@ export default Home = React.memo(HomePage)
 **React.lazy() y componente Suspense**
 - Suspense es un componente de React que nos va a permitir suspender algo cuando está en modo `lazy();` y `lazy()`. El cual nos va a permitir importar un componente que no será cargado hasta que este sea llamado. De esta forma mejoraremos el tiempo de carga de nuestra aplicación enormemente.
 
+**Usando PropTypes para validar las props**
+- Las PropTypes serán un validador del tipo de datos que estamos recibiendo como props en nuestros componentes, el cual nos permitirá a que sea exclusivamente ese tipo de datos.
 
 
 
