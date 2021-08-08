@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  padding: 16px;
+  padding: 5px 16px 16px;
+  margin-bottom: 30px;
+  border-top: 1px solid #ccc;
 `;
 
 export const Title = styled.h1`

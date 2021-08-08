@@ -15,12 +15,19 @@ export const UserForm = ({ error, disabled, onSubmit, title }) => {
     <>
       <Form disabled={disabled} onSubmit={handleSubmit}>
         <Title>{title}</Title>
-        <Input disabled={disabled} placeholder="Email" {...email} type="text" />
+        <Input
+          disabled={disabled}
+          placeholder="Email"
+          {...email}
+          type="text"
+          value="test@test.com"
+        />
         <Input
           disabled={disabled}
           placeholder="Password"
           {...password}
           type="password"
+          value="12345678"
         />
         <Button disabled={disabled}>{title}</Button>
       </Form>

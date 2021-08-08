@@ -79,6 +79,17 @@ export default Home = React.memo(HomePage)
 **Usando PropTypes para validar las props**
 - Las PropTypes serán un validador del tipo de datos que estamos recibiendo como props en nuestros componentes, el cual nos permitirá a que sea exclusivamente ese tipo de datos.
 
+**PWA: generando el manifest**
+- Usaremos `webpack-pwa-manifest` para crear nuestro `manifest.json` y que nuestra aplicación pueda ser compatible con todos los requerimientos de una PWA.
+
+**PWA: soporte offline**
+- Utilizaremos `workbox-webpack-plugin` para agregar soporte online a nuestro proyecto, así como lo hacen Twitter e Instagram cuando entramos desde el navegador.
+
+**Testing con Cypress**
+Vamos a usar cypress para hacer testing de nuestra aplicación. Hacer testing es imprescindible en nuestras aplicaciones para corroborar que todo está funcionando y mandar los datos a producción.
+
+[https://www.cypress.io/](https://www.cypress.io/)
+
 
 
 

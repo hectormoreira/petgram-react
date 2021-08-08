@@ -8,6 +8,7 @@ const HomePage = ({ categoryId }) => {
     <Layout
       title="Tu app de fotos de mascotas"
       subtitle="Con petgram puedes encontrar fotos de mascotas muy bonitas"
+      show={false}
     >
       <ListOfCategories />
       <ListOfPhotoCards categoryId={categoryId} />

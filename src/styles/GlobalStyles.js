@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   button { background: transparent; border: 0; outline: 0 }
 
   body {
-    background: #fefefe;
+    background: #1cacae;
     height: 100vh;
     margin: 0 auto;
     max-width: 500px;
@@ -24,9 +24,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #app {
+    background-color: #f4f4f4;
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     overflow-x: hidden;
     min-height: 100vh;
     padding-bottom: 10px;
   }
-`
+`;
